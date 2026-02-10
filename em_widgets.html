@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ErinsMod Widget Customiser</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyEAQAAADkppx5AAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kb9Lw0AcxV9TpVIqDkYQcchQneyiIo61CkWoEGqFVh1MLv0FTVqSFBdHwbXg4I/FqoOLs64OroIg+APEP0CcFF2kxO8lhRYxHhz34d29x907QGhWmG71xAHdsM10MiFlc6tS6BUCwhAxBElhVm1OllPwHV/3CPD1Lsaz/M/9Ofq1vMWAgEQcZzXTJt4gntm0a5z3iUVWUjTic+IJky5I/Mh11eM3zkWXBZ4pmpn0PLFILBW7WO1iVjJ14mniqKYblC9kPdY4b3HWK3XWvid/YSRvrCxzneYokljEEmRIUFFHGRXYiNFqkGIhTfsJH/+I65fJpZKrDEaOBVShQ3H94H/wu1urMDXpJUUSQO+L43yMAaFdoNVwnO9jx2mdAMFn4Mro+KtNYPaT9EZHix4BA9vAxXVHU/eAyx1g+KmmmIorBWkKhQLwfkbflAMGb4Hwmtdbex+nD0CGukrdAAeHwHiRstd93t3X3du/Z9r9/QB3AHKo29oi7gAAAAJiS0dEAACqjSMyAAAACXBIWXMAAA7nAAAO5wGqug7iAAAgAElEQVRoBQFCJ73YAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAN3dAAD//0hI//84OP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//7Ky///39///Zmb//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//eXnr6///9fX/////QED//wAA//8AAP//AAD//wAA//8AAP//RUXs7P//eHj/////7e3//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKCgAAD4++PgAAAAAAAAAAAAAAAAAAAAAUVGengAAyckAAAAATEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKyve3gAAnp4AAAAAEhIAAAAAAAAAAAAAAAD19QAAAAB2dgAAtbUAADw8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+Pvn51tbv78HBCAidnQAAAAAAAAAAAAAAAAAAAQH9/QAA7OwAAAAAHBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAALy/l5QAAY2MAAAAA3d0AAAAAAAAAAAAAAAALC1VV6uqJibq6SkoAAIuLAAAAAAAAAAAAAAAAAAAAAAAAAQEAABgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoKNnZAQFLSwAA9vZiYgAAMTEAAAAAAAAAAAAA0dEtLQAAqqoAAPv7UlIAACMjAAAAAAAAAAAAAAAAAAACAgAATEy/vwAANTUAAAAAysoAAAAAAAAAAAAAAAAAAEREysoAAMLCAAAAAAkJAAAAAAAAAAAAAAAAAAANDQAA1tb+/ufnAACSkgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAC9vScnAAAEBAAAzc0AAAAAUlIAAAAAAAAAAAAAtrYvLwAArKwAAMzMBQUAAGJiAAAAAAAAAAAAAAAAAAA3N+7uFBSSkgAAIyMAAAAAxcUAAAAAAAAAAAAAAAAAADQ02NgAACkpAAAAAN7eAAAAAAAAAAAAAAAAAABWVtvbKChBQQAAAABsbP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAADd3QcHv79eXgAA1dUAAAAAQ0MAAAAAAAAAAAAAtbUdHeHhtrYAABAQAAAAAAICAAAAAAAAAAAAAAAAAAAmJu/vAAAzMwAAIyMAAAAAvLwAAAAAAAAAAAAAFRX9/TIyp6cAADExAAAAAL+/AAAAAAAAAAAAAAAAAABBQdXVAAAZGQAAAAD19fv7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//l5eysv//JCT///f3/////x0d//8AAP//AAD//ysr//+wsP//nJz//woK//8AAP//AAD//wAA//8WFv7+7Ozw8P////+rq///AAD//wAA//8AAP//OTno6P//AAD///Dw/////y8v//8AAP//AAD//wAA///n52xs//+kpP////+zs///AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//1hY///o6P//5ub//zY2AP//AAD//wAA//8AAP//AAD//wAA//8AAP//XV3Z2f//AAD//9XV/////2Ji//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//ExP//y8v+fkAAP//AAD//wAA//8AAP//VVXd3f//AAD///z8/////yEh//8AAP//AAD//ycn8/P//wAA///U1P////9paf//AAD//wAA//8AAP//AAD//wAA//8AAP//ZWXy8v//hIT//7a2/////5mZAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsbEmJu7upaUAAAsLAAAAAPz8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7e0AANHRBgYAAAAAAAAAAAAAAAAAAAAA7+8ICAAAAAAAAAEBAAAAAPDwAAAAAAAAAAAAAA4O9PQAAAAAAAAWFgAAAADNzQAAAAAAAAAAAAAAAAAAAAAAAAAAAABERPn5mJh2dgAA2NgAADc3AAAAAM3NAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//zk5//+8vP//oaH//woK//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//Dw////Dwzc3/////5+f//wAA//8AAP//AAD//x8f9/f+/q2t//////Ly//8HB///AAD//wAA//8AAP//AAD//yIi///t7Y6O//9SUv//8fH/////h4f//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//y4u//+Ghv//Li7//wAA//8AAP//AAD//wAA//9WVv//sLD//0lJ//8AAP//AAD//wAA//8AAP//DAz//+Hhqan//wAA///Y2P////+Pj///AAD//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD19QAA/v4AAP7+AAD+/gAA//8AAP//AAD//wAA//8AAP7+AAD8/AAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//Nzfr6///AAD//7m5/////9TU//8KCv//AAD//wAAAf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAArKwAAoKAAADMzAADs7AAA7+8AAPf3AAD9/QAAAAAAAAMDAAAFBQAACAgAAAcHAAAJCQAACQkAAAkJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9fUAAODgAAD39wAA19cAANraAAC3twAA2NgAANPT8PAhIRAQ2toAAEZGAADh4QAAAAAAAAAAAf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFFRAACkpOXlCgrGxgAA//8AAAUFAAAJCQAABAQAAAEBAAD7+wAA+voAAPv7AAD9/QAAAAAAAAEBAAAAAAAAAAAAAAAAAAD//wAA9vYAAPn5AAD+/gAA//8AAAAAAAAAAAAAAAAAAAQEAAAMDAAABQUAAP//AAALCwAAFhYAABAQAAAZGQAADAwAAAAAm5sAAHBwAAApKQAA0tIAAPv7AAAAAAAAAAAAAAAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//a2v/////y8v//yYm//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//pqb//////////yws//8AAP//AAD//wAA//8AAP//AAD//wAAAP//AAD//wAA//8AAP//AAD//wAA//+Hh/////+ysv//AAD//wAA//8AAP//q6v//+fn///n5///7u7///T0///09P//8PD//+fn//+7u///AAD//wAA//+Kiv//5eX//+np///5+f//////////////////5ub//wAA//8AAP//zc3//+fn///n5///4uL//83N///Dw///p6f//1pa//8AAP//AQH//+/v/////5WV//8AAP//AAD//wAA//8AAP//AAD//wAAAP//AAD//wAA//8AAP//AAD//5OT/v7//6mp//8AAP//BQX//5OT//8AAP//YGD///r6//////////////////////////////Hx//9HR///eHj//1VV//9OTv//+/v/////////////////////////////jo7//wAA//8AAP//oqL//////////////////////////////////4CA//8AAP//AAD//6en//////z8//82Nv//AAD//wAA//8AAP//AAD//wAAAP//AAD//wAA//8AAP//iYn+/v//paX//wAA//84OP//3d3////////Fxf//AAD//6ys////////////////////////+/v//3p6//91df//+vr//93d//8AAP//xMT////////////////////////IyP//AAD//66u//+qqv//AAD//+fn////////////////////////1NT//wAA//+xsf//YWH//wAA///d3f/////j4///Hx///wAA//8AAP//AAD//wAAAP//AAD//wAA//9qav////+oqP//AAD//zg4///i4v//////////////////o6P//wAA///b2///////////////////pqb//0tL///x8f////////////+hof//Skr///f3/////////////+rq//84OP//fn7///z8///6+v//Zmb//319///////////////////8/P//Z2f//3l5///+/v//6en//zk5//87O///5eX/////4eH//yIi//8AAP//AAD//wAAAP//AAD//0ND///+/rW1//8AAP//Nzf//+Li////////////////////////+/v//3p6//9ISP//8fH////////Q0P//AAD//9vb///////////////////z8///ODj//62t////////+fn//2Zm//9BQf//8PD/////////////4+P//woK///Hx//////////////Cwv//Cwv//+np/////////////+Hh//81Nf//QUH//+Pj/////+Xl//8oKP//AAD//wAAAP//ERH//+fn1dX//wAA//8AAP//1tb///////////////////////////////////Hx//9HR///Zmb//97e//84OP//rKz/////////////////////////////s7P//wQE///X1///hob//wAA///Y2P///////////////////////7m5//84OP//7u7///X1//8/P///q6v////////////////////////Y2P//Fxf//zg4///i4v/////m5v//ISH//wAAAP//jIz29v//Q0P//wAA//+3t//////////////////////////////////////////////e3v//BAT//wAA//9RUf//+fn///////////////////r6///o6P//2tr//wAA//8AAP//AAD//4mJ///n5///5+f//+fn///n5///5+f//+Xl//9iYv//cXH//5OT//85Of//9vb/////////////////////////////zMz//wAA//85Of//4+P/////3Nz//wYGAf//5+e7uxgYRkYAABgYAADY2AAADw8AAAAAAAD//wAA+fkAAPr6AAD39wAA//8AAAAAAADz8wAAoqIAAISEAABhYQAAKysAAO/vAADt7QAAnJwAAPz8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7OwAAZ2cAAAgIAAD//wAAAAAAAAAAAAADAwAACgoAALm5AACRkQAAXV0AAKKiAAAAAFBQBAAAEhL09AAAAAAAAOjoAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfnwAAAAAAAAAAAAAAAAAAd3cAABgYAAAICAAACQkAAAkJAAABAQAAAAAAAMjIAACOjgAAk5MAABcXAAAAAAAA+fkAAPb2AAD+/gAAxMQAAKWlAAAzMwAA2dkAAAAAAAABAQAAAAAAAP7+AADq6gAA6uoAALKyAAAAAAAA9PQAAAAAAAAAAAkJAP//rq7l5f//AAD//wAA//8JCf//cHD//4GB//+kpP//qan//7Gx//+QkP//AAD//4WF///t7f///v7//////////////////7Ky///U1P//+/v///f3///39///9/f///f3///7+////////6qq//8AAP//+fn/////////////////////////////+/v//6Sk////////////////////////////////////////6ur//zQ0//8AAP//zc3/////5ub//wkJAP//NTX/////oaH//wAA//+4uP/////////////////////////////+/v//cnL//zc3///29v///////////////////////+fn////////WFj//wAA//8AAP//AAD//wAA//+trf///////5qa//9ubv//////////////////8fH//35+//98fP//29v///z8///////////////////////////////////5+f//ZWX//wAA//+Rkf//////////VVX//wAAAP//AAD//5yc9/f//1hY//8tLf//6en/////////////////////////////3Nz//wAA//+xsf/////////////////////////////x8f//AAD//wAA//9tbf//qan//6mp///m5v///////7S0///Dw///////////////////xMT//wAA//8AAP//3Nz///////////////////////////////////////+jo///l5f//5yc///09P/////b2///Vlb//xISAP//AAD//wwM///f393d//8AAP//aGj///r6/////////////////////////////4+P//83N///9PT////////////////////////T0///AAD//wAA///Gxv//////////////////////////////////////////////////6+v//8zM///R0f///////////////////////////////////////+Xl///6+v///////////////////////////////9PTAP//AAD//wAA//83N///+fm6uv//AAD//5WV/////////////////////////////+zs//8VFf//p6f///////////////////////+vr///AAD//wAA//8AAP//AAD//+rq//+trf//AAD//wAA//8AAP//AAD//4WF///7+///SEj//wAA//93d///8PD//wAA//8AAP//AAD//wAA//8fH///3d3///7+//+0tP//AAD//wAA//8AAP//AAD//3Bw//////r6AP//AAD//wAA//8AAP//bm7/////j4///wAA//+3t/////////////////////////////+urv//Dg7//+zs//////////////////93d///AAD//yoq//+oqP//rKz///////9wcP//AAD//zU1//9ra///AAD//wAA///Q0P//AAD//wAA//+np///0tL//wAA//8AAP//cHD//wAA//8AAP//mZn//8vL//8AAP//AAD//4yM//+rq///q6v//8zM/////8DAAP//AAD//wAA//8AAP//AAD//6Ki+fn//2dn//8AAP//zs7////////////////////////39///Skr//5KS//////////////v7//8ICP//AAD//4yM//////////////j4//8BAf//AAD//4+P//+Cgv//AAD//xsb///Kyv//AAD//wAA///Ozv//rKz//wAA//8AAP//urr//wAA//8AAP//wMD//52d//8AAP//AAD//wAA//8AAP//AAD//83N/////4aGAP//AAD//wAA//8AAP//AAD//wkJ///Hx+/v//9ERP//Kyv//+Hh////////////////////////yMj//wAA///f3////////97e//8AAP//AAD//7Oz/////////////9zc//8AAP//AAD//7y8///s7P//6Oj//+zs//+jo///AAD//wAA///t7f//dXX//wAA//87O///trb//wAA//8AAP//4eH//7+///+rq///q6v//11d//8AAP//AAD//+zs/////1BQAP//AAD//wAA//8AAP//AAD//wAA//8bG///4eHi4v//MDD//zs7///o6P///////////////////v7//3Bw//91df///////729//8AAP//AAD//wAA//8AAP//HBz//7m5//8AAP//AAD//97e//////////////////9ra///AAD//0pK///5+f//BAT//wAA//+MjP//hob//wAA//8MDP//7u7//wAA//8AAP//AAD//wAA//8AAP//g4P//////////xYWAf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALS0AAMfH0dELCzAwAABdXQAAlJQAAA4OAAAAAAAAAAAAAODgAAAhIQAAzMwAAAUFAADZ2QAAAAAAAAAAAAAAAAAAFhYAAA8PAADb2wAAAAAAAE9PAAAGBgAAAAAAAAAAAACrqwAAAAAAABsbAAAsLAAAubkAAAAAAAAtLQAA2dkAAPr6AAAWFgAALy8AALu7AAAAAAAAAAAAAAAAAAASEgAAPz8AAAQE3d0AAEFBAf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8/AAC6usjIBgY5OQAAYmIAAJGRAAAMDAAAAAAAAAAAAACZmQAAuLgAAKmpAAAGBgAAAAAAAPX1AAAHBwAABAQAAAAAAADw8AAA8/MAAAAAAAANDQAAEBAAAAAAAAD19QAA6ekAAAAAAAAXFwAA//8AAO/vAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0NAAAQEKmpAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//9fX/////+wsP//AAD//3R0///4+P/////////////u7v//Ly///7S0/////////////0pK//+7u/////////////+Ojv//AAD//wAA//+qqv////////////+amv//AAD//wAA///c3P//nJz//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//7W1/////6ysAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//aWn/////qqr//wAA//+Fhf//+vr/////////////trb//y8v///t7f///////5CQ//+Ojv////////////87O///AAD//wAA//+qqv///////+zs//8BAf//AAD//wAA///4+P//19f//8vL///Ly///y8v//8vL///Ly///y8v//8vL///Ly///y8v//4yM//8AAP//AAD//9nZ/////3R0AP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//4CA/////6Sk//8AAP//hob///v7////////+vr//1VV//+UlP///////7q6//85Of///////+np//8AAP//AAD//wAA//+np////////6Ki//8AAP//AAD//29v/////////Pz//+fn///n5///5+f//+7u///////////39//////o6P//5+f//4uL//8AAP//AAD///X1/////zo6AP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//+UlP7+//+bm///AAD//4aG///7+////////9DQ//8AAP//29v//9ra//8AAP//6Oj//8jI//8AAP//AAD//wAA//+fn///7+///xMT//8AAP//AAD//6mp///y8v//f3///wAA//8AAP//AAD//zAw///t7f//+vr//5OT//8AAP//AAD//wAA//8AAP//Z2f/////+/v//wQEAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAAOzsAAP//mJj9/f//mZn//wAA//+Hh///+vr///////99ff//aWn///Dw//8AAP//4+P//6Cg//8AAP//AAD//wAA//+Zmf//rKz//ygo//8AAP//AAD//8/P//+ysv//AAD//z1hxyMAAAdNSURBVAAA//+EhP//AAD//wAA///Hx///x8f//wAA//8AAP//k5P//wAA//8AAP//o6P/////w8P//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAMzMAAD//5mZ/f3//56e//8AAP//hIT///j4///l5f//AAD//7q6//9jY////v7//2Rk//9OTv//AAD//wAA//9sbP//NDT//3t7//8AAP//AAD//+7u//97e///AAD//ysr//+0tPb2AAD//wAA///e3v//nZ3//wAA//8AAP//t7f09AAA//8AAP//ysr/////iYn//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AACgoAAA//+YmP7+//+np///AAD//25u///x8f//oaH//yws//+dnf//8/P//wAA//+UlP//AAD//wAA//8AAP//mZn//2dn//8AAP//Tk7///7+//8QEP//AAD//29v//98fP//AAD//wAA///6+v//Y2P//wAA//8nJ///lZX//wAA//8AAP//6+v/////UFD//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAAwMAAAP//jo7/////q6v//wAA//9eXv//19f//zc3//+1tf//19f//wAA//+/v///AAD//wAA//8AAP//2tr//wAA//8AAP//lZX///////93d///AAD//wAA//8AAP//AAD//7e3////////m5v//wAA//8AAP//AAD//wAA//9CQv//////////Fxf//wAAAf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHFxAACOjsTEAAA9PQAALi4AABQUAAB7ewAALy8AAObmAAAcHAAA3t4AAAAAAAAGBgAAJCQAANXVAAAAAAAAHBwAABgY8vLw8A4O3NwAAAAAAAAAAAAAFBQAACAg9fUAAK6u9fVdXdfXAAAAAAAAAAAAAAAAAAAPDwAAJSXY2AAAKSkAAAAAAf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABiYgAAmJjV1QUFZGQAAMjIAABVVQAAenoAAAkJAAD39wAADAwAAAAAAAD8/AAAExMAABUVAAAAAMnJAADV1QAAhoYAAHBwAAAlJQAAAAAAAAAAAADr6wAAhIQAANnZAAB+fgAAOTkAAAEBAAAAAAAAAAAAAPb2AACNjQAAxcUAAAAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//QED///Hx6Oj//2Vl//8AAP//AAD//wAA//8AAP//AAD//wAA//+2tv//////////l5f//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//yIi///V1fr6//+lpf//AAD//wAA//8AAP//S0v//9jY//////7+//9xcf//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8KCv//k5P/////5ub//66u//+7u///9/f/////5eX//0ND//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//zMz//+urv//+fn//+vr//+Li///Dw///wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA2Av3xI82VIUAAAAASUVORK5CYII="/>
+<style>
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: radial-gradient(circle at top, #141b33 0, #050712 45%, #02030a 100%);
+    color: #f8fbff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .app-wrap {
+    width: min(1200px, 100%);
+    max-height: 100%;
+    background: radial-gradient(circle at 0 0, rgba(88,255,236,0.02), transparent 40%),
+                radial-gradient(circle at 100% 100%, rgba(114,137,255,0.05), transparent 35%),
+                rgba(0,0,10,0.97);
+    border-radius: 18px;
+    border: 1px solid rgba(80,110,240,0.5);
+    box-shadow:
+      0 0 0 1px rgba(0,0,0,0.85),
+      0 30px 80px rgba(0,0,0,0.85);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .app-header {
+    padding: 14px 18px 10px 18px;
+    border-bottom: 1px solid rgba(73, 92, 172, 0.7);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background:
+      linear-gradient(to right, rgba(6, 10, 32, 0.95), rgba(6, 9, 22, 0.98));
+  }
+
+  .app-header-main {
+    flex: 1 1 auto;
+  }
+
+  .app-title-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .app-title {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #f5f8ff;
+  }
+
+  .app-badge {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 3px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(126, 158, 255, 0.9);
+    background: radial-gradient(circle at 0 0, rgba(88,255,236,0.15), transparent 45%),
+                rgba(7, 11, 30, 0.96);
+    color: #d6e2ff;
+  }
+
+  .app-subtitle {
+    margin-top: 4px;
+    font-size: 12px;
+    opacity: 0.82;
+    color: #b7c5f5;
+  }
+
+  .app-header-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    font-size: 11px;
+  }
+
+  .tag-pill {
+    padding: 3px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(112, 206, 255, 0.85);
+    background: radial-gradient(circle at 0 0, rgba(88,255,236,0.18), transparent 40%),
+                rgba(4, 10, 20, 0.96);
+    color: #e4f5ff;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+  }
+
+  .app-body {
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .panel-left {
+    width: 320px;
+    border-right: 1px solid rgba(60, 82, 170, 0.9);
+    background: radial-gradient(circle at top left, rgba(90,255,210,0.08), transparent 45%),
+                rgba(3, 6, 18, 0.98);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panel-right {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .widget-tabs {
+    gap: 6px;
+    padding: 10px 12px 8px 12px;
+    border-bottom: 1px solid rgba(58, 80, 165, 0.9);
+  }
+
+  .widget-tab {
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    border: 1px solid rgba(86, 115, 230, 0.75);
+    background: rgba(5, 9, 32, 0.92);
+    color: #d7e2ff;
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .widget-tab span.badge {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.8;
+  }
+
+  .widget-tab.active {
+    background: radial-gradient(circle at 0 0, rgba(88,255,236,0.18), transparent 45%),
+                rgba(10, 20, 60, 0.95);
+    border-color: rgba(136, 186, 255, 1);
+    box-shadow: 0 0 0 1px rgba(10, 180, 255, 0.35);
+  }
+
+  .config-panel {
+    padding: 10px 12px 12px 12px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+
+  .section-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    opacity: 0.86;
+    margin-bottom: 6px;
+    color: #d0dcff;
+  }
+
+  .field-group {
+    margin-bottom: 12px;
+    padding: 8px 9px;
+    border-radius: 10px;
+    background: rgba(8, 11, 22, 0.96);
+    border: 1px solid rgba(55, 78, 160, 0.85);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.75);
+  }
+
+  .field-group + .field-group {
+    margin-top: 6px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+
+  .field-row {
+    display: flex;
+    gap: 6px;
+  }
+
+  .field-row > * {
+    flex: 1 1 0;
+  }
+
+  .field label {
+    font-size: 11px;
+    opacity: 0.88;
+    color: #c4d0ff;
+  }
+
+  .field small {
+    font-size: 10px;
+    opacity: 0.7;
+    color: #9da9df;
+  }
+
+  input[type="text"],
+  input[type="url"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 6px 7px;
+    border-radius: 7px;
+    border: 1px solid rgba(78, 102, 190, 0.9);
+    background: rgba(4, 7, 20, 0.96);
+    color: #f3f6ff;
+    font-size: 12px;
+    outline: none;
+  }
+
+  input[type="text"]::placeholder,
+  input[type="url"]::placeholder {
+    color: rgba(160, 176, 230, 0.6);
+  }
+
+  input[type="text"]:focus,
+  input[type="url"]:focus,
+  textarea:focus {
+    border-color: rgba(124, 182, 255, 1);
+    box-shadow: 0 0 0 1px rgba(90, 164, 255, 0.6);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+    max-height: 180px;
+  }
+
+  input[type="color"] {
+    padding: 0;
+    border-radius: 7px;
+    border: 1px solid rgba(86, 110, 210, 0.9);
+    background: transparent;
+    width: 42px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  input[type="file"] {
+    font-size: 11px;
+  }
+
+  .small-input {
+    max-width: 90px;
+  }
+
+  .toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    gap: 6px;
+  }
+
+  .toggle-row label {
+    flex: 1 1 auto;
+  }
+
+  .toggle-row input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+  }
+
+  .radio-pill-row {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+  }
+
+  .radio-pill {
+    flex: 1 1 0;
+    padding: 5px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(72, 106, 210, 0.9);
+    background: rgba(4, 7, 16, 0.96);
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .radio-pill.active {
+    border-color: rgba(130, 186, 255, 1);
+    background: radial-gradient(circle at 0 0, rgba(88,255,236,0.2), transparent 45%),
+                rgba(8, 15, 40, 0.98);
+    box-shadow: 0 0 0 1px rgba(80, 190, 255, 0.7);
+  }
+
+  .radio-pill span.sub {
+    display: block;
+    font-size: 10px;
+    opacity: 0.78;
+    margin-top: 1px;
+  }
+
+  .panel-right-inner {
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .preview-panel {
+    flex: 1 1 auto;
+    padding: 10px 12px 12px 12px;
+    min-width: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+
+  .preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 10px;
+  }
+
+  .widget-card {
+    background: radial-gradient(circle at 0 0, rgba(88,255,236,0.06), transparent 45%),
+                rgba(5, 9, 18, 0.98);
+    border-radius: 12px;
+    border: 1px solid rgba(60, 90, 180, 0.9);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.85),
+                0 12px 28px rgba(0,0,0,0.9);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .widget-card-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px;
+    font-size: 11px;
+  }
+
+  .widget-name {
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  .widget-meta {
+    font-size: 11px;
+    opacity: 0.75;
+    color: #c0cfff;
+  }
+
+  .widget-type-chip {
+    padding: 2px 7px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-radius: 999px;
+    border: 1px solid rgba(110, 140, 255, 0.9);
+    background: rgba(8, 12, 36, 0.98);
+    color: #d4e0ff;
+  }
+
+  .widget-card-body {
+    display: flex;
+    gap: 8px;
+  }
+
+  .widget-card-preview {
+    flex: 1 1 0;
+  }
+
+  .widget-card-export {
+    width: 210px;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .export-box {
+    border-radius: 10px;
+    background: rgba(7, 11, 20, 0.98);
+    border: 1px solid rgba(90, 120, 210, 0.9);
+    padding: 8px 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .export-heading {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.88;
+  }
+
+  .export-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  .export-row span.label {
+    opacity: 0.8;
+  }
+
+  .export-row span.value {
+    font-weight: 600;
+  }
+
+  .export-url-input,
+  .export-css {
+    width: 100%;
+    font-size: 11px;
+    border-radius: 7px;
+    border: 1px solid rgba(76, 104, 192, 0.9);
+    background: rgba(3, 6, 16, 0.96);
+    color: #f3f6ff;
+    padding: 5px 6px;
+    resize: vertical;
+    min-height: 52px;
+    max-height: 150px;
+  }
+
+  .export-url-input {
+    min-height: auto;
+    max-height: none;
+  }
+
+  .export-buttons {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+
+  .btn {
+    border-radius: 999px;
+    border: 1px solid rgba(120, 180, 255, 0.9);
+    background: radial-gradient(circle at 0 0, rgba(88,255,236,0.2), transparent 45%),
+                rgba(10, 18, 42, 0.98);
+    color: #f2f7ff;
+    font-size: 11px;
+    padding: 4px 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+  }
+
+  .btn.secondary {
+    background: rgba(6, 8, 20, 0.98);
+    border-color: rgba(98, 132, 212, 0.9);
+  }
+
+  .btn:active {
+    transform: translateY(1px);
+    box-shadow: none;
+  }
+
+  .footer-note {
+    padding: 6px 12px 10px 12px;
+    font-size: 10px;
+    opacity: 0.74;
+    color: #aeb8e2;
+    border-top: 1px solid rgba(50, 68, 150, 0.8);
+    background: linear-gradient(to right, rgba(4, 7, 18, 0.96), rgba(8, 10, 22, 0.96));
+  }
+
+  .footer-note code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 10px;
+    padding: 1px 4px;
+    border-radius: 4px;
+    background: rgba(8, 12, 28, 0.96);
+    border: 1px solid rgba(78, 102, 190, 0.9);
+  }
+
+  /* --- Gauge preview styling (mirrors Webdash classes) --- */
+
+  .em-widget-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .em-gauge {
+    width: 100%;
+    height: 100%;
+    max-width: 150px;
+    max-height: 130px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: radial-gradient(circle at 0 0, rgba(88,255,236,0.12), transparent 50%),
+                rgba(3, 6, 14, 0.98);
+    border-radius: 10px;
+    border: 1px solid rgba(80, 120, 210, 0.95);
+    position: relative;
+    overflow: hidden;
+    color: var(--em-text);
+    font-family: var(--em-font);
+  }
+
+  /* Per-type sizing in preview */
+  .em-gauge[data-type="bar"] {
+    max-width: 150px;
+    max-height: 75px;
+  }
+
+  .em-gauge[data-type="dial"] {
+    max-width: 150px;
+    max-height: 130px;
+  }
+
+  body.no-data .em-gauge {
+    opacity: 0.3;
+    filter: grayscale(0.8);
+  }
+
+  .em-gauge-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.9;
+  }
+
+  .em-gauge-header .label {
+    font-weight: 600;
+  }
+
+  .em-gauge-header .unit {
+    opacity: 0.7;
+    font-weight: 500;
+  }
+
+  .em-gauge-footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 4px;
+  }
+
+  .em-gauge-value {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .em-gauge-footer span.sub {
+    font-size: 10px;
+    opacity: 0.8;
+  }
+
+  /* --- Bar mode --- */
+
+  .em-gauge-bar {
+    margin: 4px 0 2px 0;
+    height: 16px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(4,8,18,0.95), var(--em-track));
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.75);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .em-gauge-bar-fill {
+    height: 100%;
+    width: 65%;
+    background: linear-gradient(90deg, rgba(72,255,186,0.1), var(--em-accent));
+    box-shadow:
+      0 0 16px rgba(0,0,0,0.9),
+      0 0 18px rgba(88, 255, 236, 0.6);
+    border-radius: inherit;
+    position: relative;
+  }
+
+  /* --- Dial mode --- */
+
+  .em-gauge-dial-wrapper {
+    display: none;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .em-gauge-dial {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    position: relative;
+    background:
+      radial-gradient(circle at 50% 15%, var(--em-accent-dial-bg, var(--em-accent)), transparent 55%),
+      radial-gradient(circle at 50% 80%, rgba(10, 14, 26, 0.98), rgba(2, 4, 10, 1));
+    box-shadow:
+      inset 0 0 0 1px rgba(255,255,255,0.05),
+      0 0 18px rgba(0,0,0,0.9);
+  }
+
+  .em-gauge-dial-needle-line {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 2px;
+    height: 34%;
+    background: var(--em-accent);
+    box-shadow: 0 0 12px rgba(80,255,234,0.9);
+    transform-origin: bottom center;
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  /* Show/hide bar vs dial based on data-type attr in preview */
+  .em-gauge[data-type="bar"] .em-gauge-bar {
+    display: block;
+  }
+  .em-gauge[data-type="bar"] .em-gauge-dial-wrapper {
+    display: none;
+  }
+
+  .em-gauge[data-type="dial"] .em-gauge-bar {
+    display: none;
+  }
+  .em-gauge[data-type="dial"] .em-gauge-dial-wrapper {
+    display: flex;
+  }
+</style>
+</head>
+<body>
+<div class="app-wrap">
+  <header class="app-header">
+    <div class="app-header-main">
+      <div class="app-title-row">
+        <div class="app-title" style="padding-bottom:10px;">
+            <img style="margin-bottom:-10px;margin-right:5px;width:40px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyEAQAAADkppx5AAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kb9Lw0AcxV9TpVIqDkYQcchQneyiIo61CkWoEGqFVh1MLv0FTVqSFBdHwbXg4I/FqoOLs64OroIg+APEP0CcFF2kxO8lhRYxHhz34d29x907QGhWmG71xAHdsM10MiFlc6tS6BUCwhAxBElhVm1OllPwHV/3CPD1Lsaz/M/9Ofq1vMWAgEQcZzXTJt4gntm0a5z3iUVWUjTic+IJky5I/Mh11eM3zkWXBZ4pmpn0PLFILBW7WO1iVjJ14mniqKYblC9kPdY4b3HWK3XWvid/YSRvrCxzneYokljEEmRIUFFHGRXYiNFqkGIhTfsJH/+I65fJpZKrDEaOBVShQ3H94H/wu1urMDXpJUUSQO+L43yMAaFdoNVwnO9jx2mdAMFn4Mro+KtNYPaT9EZHix4BA9vAxXVHU/eAyx1g+KmmmIorBWkKhQLwfkbflAMGb4Hwmtdbex+nD0CGukrdAAeHwHiRstd93t3X3du/Z9r9/QB3AHKo29oi7gAAAAJiS0dEAACqjSMyAAAACXBIWXMAAA7nAAAO5wGqug7iAAAgAElEQVRoBQFCJ73YAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAN3dAAD//0hI//84OP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//7Ky///39///Zmb//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//eXnr6///9fX/////QED//wAA//8AAP//AAD//wAA//8AAP//RUXs7P//eHj/////7e3//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKCgAAD4++PgAAAAAAAAAAAAAAAAAAAAAUVGengAAyckAAAAATEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKyve3gAAnp4AAAAAEhIAAAAAAAAAAAAAAAD19QAAAAB2dgAAtbUAADw8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+Pvn51tbv78HBCAidnQAAAAAAAAAAAAAAAAAAAQH9/QAA7OwAAAAAHBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAALy/l5QAAY2MAAAAA3d0AAAAAAAAAAAAAAAALC1VV6uqJibq6SkoAAIuLAAAAAAAAAAAAAAAAAAAAAAAAAQEAABgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoKNnZAQFLSwAA9vZiYgAAMTEAAAAAAAAAAAAA0dEtLQAAqqoAAPv7UlIAACMjAAAAAAAAAAAAAAAAAAACAgAATEy/vwAANTUAAAAAysoAAAAAAAAAAAAAAAAAAEREysoAAMLCAAAAAAkJAAAAAAAAAAAAAAAAAAANDQAA1tb+/ufnAACSkgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAC9vScnAAAEBAAAzc0AAAAAUlIAAAAAAAAAAAAAtrYvLwAArKwAAMzMBQUAAGJiAAAAAAAAAAAAAAAAAAA3N+7uFBSSkgAAIyMAAAAAxcUAAAAAAAAAAAAAAAAAADQ02NgAACkpAAAAAN7eAAAAAAAAAAAAAAAAAABWVtvbKChBQQAAAABsbP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAADd3QcHv79eXgAA1dUAAAAAQ0MAAAAAAAAAAAAAtbUdHeHhtrYAABAQAAAAAAICAAAAAAAAAAAAAAAAAAAmJu/vAAAzMwAAIyMAAAAAvLwAAAAAAAAAAAAAFRX9/TIyp6cAADExAAAAAL+/AAAAAAAAAAAAAAAAAABBQdXVAAAZGQAAAAD19fv7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//l5eysv//JCT///f3/////x0d//8AAP//AAD//ysr//+wsP//nJz//woK//8AAP//AAD//wAA//8WFv7+7Ozw8P////+rq///AAD//wAA//8AAP//OTno6P//AAD///Dw/////y8v//8AAP//AAD//wAA///n52xs//+kpP////+zs///AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//1hY///o6P//5ub//zY2AP//AAD//wAA//8AAP//AAD//wAA//8AAP//XV3Z2f//AAD//9XV/////2Ji//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//ExP//y8v+fkAAP//AAD//wAA//8AAP//VVXd3f//AAD///z8/////yEh//8AAP//AAD//ycn8/P//wAA///U1P////9paf//AAD//wAA//8AAP//AAD//wAA//8AAP//ZWXy8v//hIT//7a2/////5mZAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsbEmJu7upaUAAAsLAAAAAPz8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7e0AANHRBgYAAAAAAAAAAAAAAAAAAAAA7+8ICAAAAAAAAAEBAAAAAPDwAAAAAAAAAAAAAA4O9PQAAAAAAAAWFgAAAADNzQAAAAAAAAAAAAAAAAAAAAAAAAAAAABERPn5mJh2dgAA2NgAADc3AAAAAM3NAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//zk5//+8vP//oaH//woK//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//Dw////Dwzc3/////5+f//wAA//8AAP//AAD//x8f9/f+/q2t//////Ly//8HB///AAD//wAA//8AAP//AAD//yIi///t7Y6O//9SUv//8fH/////h4f//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//y4u//+Ghv//Li7//wAA//8AAP//AAD//wAA//9WVv//sLD//0lJ//8AAP//AAD//wAA//8AAP//DAz//+Hhqan//wAA///Y2P////+Pj///AAD//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD19QAA/v4AAP7+AAD+/gAA//8AAP//AAD//wAA//8AAP7+AAD8/AAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//Nzfr6///AAD//7m5/////9TU//8KCv//AAD//wAAAf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAArKwAAoKAAADMzAADs7AAA7+8AAPf3AAD9/QAAAAAAAAMDAAAFBQAACAgAAAcHAAAJCQAACQkAAAkJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9fUAAODgAAD39wAA19cAANraAAC3twAA2NgAANPT8PAhIRAQ2toAAEZGAADh4QAAAAAAAAAAAf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFFRAACkpOXlCgrGxgAA//8AAAUFAAAJCQAABAQAAAEBAAD7+wAA+voAAPv7AAD9/QAAAAAAAAEBAAAAAAAAAAAAAAAAAAD//wAA9vYAAPn5AAD+/gAA//8AAAAAAAAAAAAAAAAAAAQEAAAMDAAABQUAAP//AAALCwAAFhYAABAQAAAZGQAADAwAAAAAm5sAAHBwAAApKQAA0tIAAPv7AAAAAAAAAAAAAAAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//a2v/////y8v//yYm//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//pqb//////////yws//8AAP//AAD//wAA//8AAP//AAD//wAAAP//AAD//wAA//8AAP//AAD//wAA//+Hh/////+ysv//AAD//wAA//8AAP//q6v//+fn///n5///7u7///T0///09P//8PD//+fn//+7u///AAD//wAA//+Kiv//5eX//+np///5+f//////////////////5ub//wAA//8AAP//zc3//+fn///n5///4uL//83N///Dw///p6f//1pa//8AAP//AQH//+/v/////5WV//8AAP//AAD//wAA//8AAP//AAD//wAAAP//AAD//wAA//8AAP//AAD//5OT/v7//6mp//8AAP//BQX//5OT//8AAP//YGD///r6//////////////////////////////Hx//9HR///eHj//1VV//9OTv//+/v/////////////////////////////jo7//wAA//8AAP//oqL//////////////////////////////////4CA//8AAP//AAD//6en//////z8//82Nv//AAD//wAA//8AAP//AAD//wAAAP//AAD//wAA//8AAP//iYn+/v//paX//wAA//84OP//3d3////////Fxf//AAD//6ys////////////////////////+/v//3p6//91df//+vr//93d//8AAP//xMT////////////////////////IyP//AAD//66u//+qqv//AAD//+fn////////////////////////1NT//wAA//+xsf//YWH//wAA///d3f/////j4///Hx///wAA//8AAP//AAD//wAAAP//AAD//wAA//9qav////+oqP//AAD//zg4///i4v//////////////////o6P//wAA///b2///////////////////pqb//0tL///x8f////////////+hof//Skr///f3/////////////+rq//84OP//fn7///z8///6+v//Zmb//319///////////////////8/P//Z2f//3l5///+/v//6en//zk5//87O///5eX/////4eH//yIi//8AAP//AAD//wAAAP//AAD//0ND///+/rW1//8AAP//Nzf//+Li////////////////////////+/v//3p6//9ISP//8fH////////Q0P//AAD//9vb///////////////////z8///ODj//62t////////+fn//2Zm//9BQf//8PD/////////////4+P//woK///Hx//////////////Cwv//Cwv//+np/////////////+Hh//81Nf//QUH//+Pj/////+Xl//8oKP//AAD//wAAAP//ERH//+fn1dX//wAA//8AAP//1tb///////////////////////////////////Hx//9HR///Zmb//97e//84OP//rKz/////////////////////////////s7P//wQE///X1///hob//wAA///Y2P///////////////////////7m5//84OP//7u7///X1//8/P///q6v////////////////////////Y2P//Fxf//zg4///i4v/////m5v//ISH//wAAAP//jIz29v//Q0P//wAA//+3t//////////////////////////////////////////////e3v//BAT//wAA//9RUf//+fn///////////////////r6///o6P//2tr//wAA//8AAP//AAD//4mJ///n5///5+f//+fn///n5///5+f//+Xl//9iYv//cXH//5OT//85Of//9vb/////////////////////////////zMz//wAA//85Of//4+P/////3Nz//wYGAf//5+e7uxgYRkYAABgYAADY2AAADw8AAAAAAAD//wAA+fkAAPr6AAD39wAA//8AAAAAAADz8wAAoqIAAISEAABhYQAAKysAAO/vAADt7QAAnJwAAPz8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7OwAAZ2cAAAgIAAD//wAAAAAAAAAAAAADAwAACgoAALm5AACRkQAAXV0AAKKiAAAAAFBQBAAAEhL09AAAAAAAAOjoAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfnwAAAAAAAAAAAAAAAAAAd3cAABgYAAAICAAACQkAAAkJAAABAQAAAAAAAMjIAACOjgAAk5MAABcXAAAAAAAA+fkAAPb2AAD+/gAAxMQAAKWlAAAzMwAA2dkAAAAAAAABAQAAAAAAAP7+AADq6gAA6uoAALKyAAAAAAAA9PQAAAAAAAAAAAkJAP//rq7l5f//AAD//wAA//8JCf//cHD//4GB//+kpP//qan//7Gx//+QkP//AAD//4WF///t7f///v7//////////////////7Ky///U1P//+/v///f3///39///9/f///f3///7+////////6qq//8AAP//+fn/////////////////////////////+/v//6Sk////////////////////////////////////////6ur//zQ0//8AAP//zc3/////5ub//wkJAP//NTX/////oaH//wAA//+4uP/////////////////////////////+/v//cnL//zc3///29v///////////////////////+fn////////WFj//wAA//8AAP//AAD//wAA//+trf///////5qa//9ubv//////////////////8fH//35+//98fP//29v///z8///////////////////////////////////5+f//ZWX//wAA//+Rkf//////////VVX//wAAAP//AAD//5yc9/f//1hY//8tLf//6en/////////////////////////////3Nz//wAA//+xsf/////////////////////////////x8f//AAD//wAA//9tbf//qan//6mp///m5v///////7S0///Dw///////////////////xMT//wAA//8AAP//3Nz///////////////////////////////////////+jo///l5f//5yc///09P/////b2///Vlb//xISAP//AAD//wwM///f393d//8AAP//aGj///r6/////////////////////////////4+P//83N///9PT////////////////////////T0///AAD//wAA///Gxv//////////////////////////////////////////////////6+v//8zM///R0f///////////////////////////////////////+Xl///6+v///////////////////////////////9PTAP//AAD//wAA//83N///+fm6uv//AAD//5WV/////////////////////////////+zs//8VFf//p6f///////////////////////+vr///AAD//wAA//8AAP//AAD//+rq//+trf//AAD//wAA//8AAP//AAD//4WF///7+///SEj//wAA//93d///8PD//wAA//8AAP//AAD//wAA//8fH///3d3///7+//+0tP//AAD//wAA//8AAP//AAD//3Bw//////r6AP//AAD//wAA//8AAP//bm7/////j4///wAA//+3t/////////////////////////////+urv//Dg7//+zs//////////////////93d///AAD//yoq//+oqP//rKz///////9wcP//AAD//zU1//9ra///AAD//wAA///Q0P//AAD//wAA//+np///0tL//wAA//8AAP//cHD//wAA//8AAP//mZn//8vL//8AAP//AAD//4yM//+rq///q6v//8zM/////8DAAP//AAD//wAA//8AAP//AAD//6Ki+fn//2dn//8AAP//zs7////////////////////////39///Skr//5KS//////////////v7//8ICP//AAD//4yM//////////////j4//8BAf//AAD//4+P//+Cgv//AAD//xsb///Kyv//AAD//wAA///Ozv//rKz//wAA//8AAP//urr//wAA//8AAP//wMD//52d//8AAP//AAD//wAA//8AAP//AAD//83N/////4aGAP//AAD//wAA//8AAP//AAD//wkJ///Hx+/v//9ERP//Kyv//+Hh////////////////////////yMj//wAA///f3////////97e//8AAP//AAD//7Oz/////////////9zc//8AAP//AAD//7y8///s7P//6Oj//+zs//+jo///AAD//wAA///t7f//dXX//wAA//87O///trb//wAA//8AAP//4eH//7+///+rq///q6v//11d//8AAP//AAD//+zs/////1BQAP//AAD//wAA//8AAP//AAD//wAA//8bG///4eHi4v//MDD//zs7///o6P///////////////////v7//3Bw//91df///////729//8AAP//AAD//wAA//8AAP//HBz//7m5//8AAP//AAD//97e//////////////////9ra///AAD//0pK///5+f//BAT//wAA//+MjP//hob//wAA//8MDP//7u7//wAA//8AAP//AAD//wAA//8AAP//g4P//////////xYWAf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALS0AAMfH0dELCzAwAABdXQAAlJQAAA4OAAAAAAAAAAAAAODgAAAhIQAAzMwAAAUFAADZ2QAAAAAAAAAAAAAAAAAAFhYAAA8PAADb2wAAAAAAAE9PAAAGBgAAAAAAAAAAAACrqwAAAAAAABsbAAAsLAAAubkAAAAAAAAtLQAA2dkAAPr6AAAWFgAALy8AALu7AAAAAAAAAAAAAAAAAAASEgAAPz8AAAQE3d0AAEFBAf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8/AAC6usjIBgY5OQAAYmIAAJGRAAAMDAAAAAAAAAAAAACZmQAAuLgAAKmpAAAGBgAAAAAAAPX1AAAHBwAABAQAAAAAAADw8AAA8/MAAAAAAAANDQAAEBAAAAAAAAD19QAA6ekAAAAAAAAXFwAA//8AAO/vAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0NAAAQEKmpAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//9fX/////+wsP//AAD//3R0///4+P/////////////u7v//Ly///7S0/////////////0pK//+7u/////////////+Ojv//AAD//wAA//+qqv////////////+amv//AAD//wAA///c3P//nJz//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//7W1/////6ysAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//aWn/////qqr//wAA//+Fhf//+vr/////////////trb//y8v///t7f///////5CQ//+Ojv////////////87O///AAD//wAA//+qqv///////+zs//8BAf//AAD//wAA///4+P//19f//8vL///Ly///y8v//8vL///Ly///y8v//8vL///Ly///y8v//4yM//8AAP//AAD//9nZ/////3R0AP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//4CA/////6Sk//8AAP//hob///v7////////+vr//1VV//+UlP///////7q6//85Of///////+np//8AAP//AAD//wAA//+np////////6Ki//8AAP//AAD//29v/////////Pz//+fn///n5///5+f//+7u///////////39//////o6P//5+f//4uL//8AAP//AAD///X1/////zo6AP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//+UlP7+//+bm///AAD//4aG///7+////////9DQ//8AAP//29v//9ra//8AAP//6Oj//8jI//8AAP//AAD//wAA//+fn///7+///xMT//8AAP//AAD//6mp///y8v//f3///wAA//8AAP//AAD//zAw///t7f//+vr//5OT//8AAP//AAD//wAA//8AAP//Z2f/////+/v//wQEAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAAOzsAAP//mJj9/f//mZn//wAA//+Hh///+vr///////99ff//aWn///Dw//8AAP//4+P//6Cg//8AAP//AAD//wAA//+Zmf//rKz//ygo//8AAP//AAD//8/P//+ysv//AAD//z1hxyMAAAdNSURBVAAA//+EhP//AAD//wAA///Hx///x8f//wAA//8AAP//k5P//wAA//8AAP//o6P/////w8P//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAMzMAAD//5mZ/f3//56e//8AAP//hIT///j4///l5f//AAD//7q6//9jY////v7//2Rk//9OTv//AAD//wAA//9sbP//NDT//3t7//8AAP//AAD//+7u//97e///AAD//ysr//+0tPb2AAD//wAA///e3v//nZ3//wAA//8AAP//t7f09AAA//8AAP//ysr/////iYn//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AACgoAAA//+YmP7+//+np///AAD//25u///x8f//oaH//yws//+dnf//8/P//wAA//+UlP//AAD//wAA//8AAP//mZn//2dn//8AAP//Tk7///7+//8QEP//AAD//29v//98fP//AAD//wAA///6+v//Y2P//wAA//8nJ///lZX//wAA//8AAP//6+v/////UFD//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAAwMAAAP//jo7/////q6v//wAA//9eXv//19f//zc3//+1tf//19f//wAA//+/v///AAD//wAA//8AAP//2tr//wAA//8AAP//lZX///////93d///AAD//wAA//8AAP//AAD//7e3////////m5v//wAA//8AAP//AAD//wAA//9CQv//////////Fxf//wAAAf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHFxAACOjsTEAAA9PQAALi4AABQUAAB7ewAALy8AAObmAAAcHAAA3t4AAAAAAAAGBgAAJCQAANXVAAAAAAAAHBwAABgY8vLw8A4O3NwAAAAAAAAAAAAAFBQAACAg9fUAAK6u9fVdXdfXAAAAAAAAAAAAAAAAAAAPDwAAJSXY2AAAKSkAAAAAAf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABiYgAAmJjV1QUFZGQAAMjIAABVVQAAenoAAAkJAAD39wAADAwAAAAAAAD8/AAAExMAABUVAAAAAMnJAADV1QAAhoYAAHBwAAAlJQAAAAAAAAAAAADr6wAAhIQAANnZAAB+fgAAOTkAAAEBAAAAAAAAAAAAAPb2AACNjQAAxcUAAAAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//QED///Hx6Oj//2Vl//8AAP//AAD//wAA//8AAP//AAD//wAA//+2tv//////////l5f//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//yIi///V1fr6//+lpf//AAD//wAA//8AAP//S0v//9jY//////7+//9xcf//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8KCv//k5P/////5ub//66u//+7u///9/f/////5eX//0ND//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//zMz//+urv//+fn//+vr//+Li///Dw///wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA2Av3xI82VIUAAAAASUVORK5CYII=">
+            ErinsMod Stream Widget Customiser
+        </div>
+      </div>
+    </div>
+    <div class="app-header-side">
+      <div class="tag-pill">Localhost / LAN</div>
+      <div style="opacity:0.8;">Base: <code>http://127.0.0.1:9990</code> (editable)</div>
+    </div>
+  </header>
+
+  <div class="app-body">
+    <aside class="panel-left">
+      <div class="widget-tabs" id="widgetTabs"></div>
+      <div class="config-panel">
+
+        <div class="field-group" style="display:none;">
+          <div class="section-label" style="display:none;">Widget basics</div>
+
+          <div class="field">
+            <label for="labelInput">Label</label>
+            <input id="labelInput" type="text" placeholder="Throttle, RPM, Speed...">
+          </div>
+
+          <div class="field" style="display:none;">
+            <label for="endpointInput">Endpoint path</label>
+            <input id="endpointInput" type="text" placeholder="throttle, brake, rpm, boost, speed">
+            <small>This should match the Webdash widget endpoint, e.g. <code>/throttle</code> or <code>/rpm</code>.</small>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="section-label">Appearance</div>
+
+          <div class="field">
+            <label>Widget type</label>
+            <div class="radio-pill-row">
+              <div class="radio-pill" data-type-option="bar">
+                Bar
+                <span class="sub" style="display:none;">Good for pedal inputs</span>
+              </div>
+              <div class="radio-pill" data-type-option="dial">
+                Dial
+                <span class="sub" style="display:none;">Good for RPM / speed</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="field field-row">
+            <div>
+              <label>Accent colour</label>
+              <div class="field-row">
+                <input id="accentColor" type="color" value="#3ff2ff">
+                <input id="accentColorHex" class="small-input" type="text" value="#3ff2ff">
+              </div>
+            </div>
+            <div>
+              <label>Gauge background colour</label>
+              <div class="field-row">
+                <input id="bgColor" type="color" value="#050712">
+                <input id="bgColorHex" class="small-input" type="text" value="#050712">
+              </div>
+            </div>
+          </div>
+
+          <div class="field field-row">
+            <div>
+              <label>Text colour</label>
+              <div class="field-row">
+                <input id="textColor" type="color" value="#f4f7ff">
+                <input id="textColorHex" class="small-input" type="text" value="#f4f7ff">
+              </div>
+            </div>
+            <div style="flex:1 1 0%;">
+              <label for="fontFamily">Font family</label>
+              <input id="fontFamily" type="text" placeholder='system-ui, "Segoe UI", sans-serif'>
+              <small>Optional. Leave blank for system default.</small>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="bgImageFile">Background image</label>
+            <input id="bgImageFile" type="file" accept="image/*">
+            <small>Optional.</small>
+          </div>
+
+          <div class="field">
+            <div class="toggle-row">
+              <label for="hideWhenNoData">Hide widget when no data</label>
+              <input id="hideWhenNoData" type="checkbox">
+            </div>
+            <small style="display:none;">Uses Webdash’s <code>body.no-data</code> class. When enabled, the widget becomes invisible instead of just dimmed.</small>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="section-label">OBS / Webdash</div>
+          <div class="field">
+            <label for="baseUrl">Webdash base URL</label>
+            <input id="baseUrl" type="text" placeholder="http://127.0.0.1:9990" value="http://127.0.0.1:9990">
+            <small>Change this if you run Webdash on a different port or host (e.g. LAN IP).</small>
+          </div>
+          <div class="field" style="display:none;">
+            <label for="containerSelector">Container CSS selector</label>
+            <input id="containerSelector" type="text" value=".em-widget-container">
+            <small>Advanced: selector to target in the CSS snippet. Default matches the Webdash widget root container.</small>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+    <section class="panel-right">
+      <div class="panel-right-inner">
+        <div class="preview-panel">
+          <div class="section-label" style="margin-bottom:6px;">Preview</div>
+          <div class="preview-grid" id="previewGrid"></div>
+        </div>
+
+        <div class="preview-panel" style="max-width:340px; border-left:1px solid rgba(60,82,170,0.9);">
+          <div class="section-label" style="margin-bottom:6px;">Export</div>
+          <div class="widget-card export-summary">
+            <div class="widget-card-header">
+              <div>
+                <div class="widget-name" id="exportWidgetName">Throttle</div>
+                <div class="widget-meta" id="exportWidgetPath">/throttle</div>
+              </div>
+              <div class="widget-type-chip" id="exportWidgetType">Bar</div>
+            </div>
+
+            <div class="widget-card-body">
+              <div class="widget-card-export" style="width:100%;max-width:none;">
+                <div class="export-box">
+                  <div class="export-heading">Browser source</div>
+                  <div class="export-row">
+                    <span class="label">Recommended size:</span>
+                    <span class="value" id="exportSize">150 × 75</span>
+                  </div>
+                  <div class="export-row">
+                    <span class="label">URL:</span>
+                  </div>
+                  <input id="exportUrl" class="export-url-input" readonly>
+                  <div class="export-buttons">
+                    <button class="btn secondary" id="copyUrlBtn">Copy URL</button>
+                  </div>
+                </div>
+
+                <div class="export-box">
+                  <div class="export-heading">Custom CSS</div>
+                  <textarea id="exportCss" class="export-css" readonly></textarea>
+                  <div class="export-buttons">
+                    <button class="btn secondary" id="copyCssBtn">Copy CSS</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        Paste the URL into an OBS Browser Source, set the size as recommended, then paste the CSS into the “Custom CSS” box.
+        Requires ErinsMod Webdash to be running.
+      </div>
+    </section>
+  </div>
+</div>
+
+<script>
+  const widgets = [
+    { id: "throttle", label: "Throttle", endpoint: "throttle", type: "bar" },
+    { id: "brake",    label: "Brake",    endpoint: "brake",    type: "bar" },
+    { id: "clutch",   label: "Clutch",   endpoint: "clutch",   type: "bar" },
+    { id: "rpm",      label: "RPM",      endpoint: "rpm",      type: "dial" },
+    { id: "boost",    label: "Boost",    endpoint: "boost",    type: "bar" },
+    { id: "speed",    label: "Speed",    endpoint: "speed",    type: "bar" }
+  ];
+
+  const widgetState = {};
+  widgets.forEach(w => {
+    widgetState[w.id] = {
+      id: w.id,
+      label: w.label,
+      endpoint: w.endpoint,
+      type: w.type,
+      accentColor: "#3ff2ff",
+      bgColor: "#050712",
+      textColor: "#f4f7ff",
+      fontFamily: "",
+      bgImageData: "",
+      hideWhenNoData: false
+    };
+  });
+
+  let activeWidgetId = "throttle";
+
+  const $ = id => document.getElementById(id);
+  const widgetTabsEl = $("widgetTabs");
+  const previewGridEl = $("previewGrid");
+
+  function buildWidgetTabs() {
+    widgetTabsEl.innerHTML = "";
+    widgets.forEach(w => {
+      const tab = document.createElement("div");
+      tab.className = "widget-tab";
+      tab.dataset.id = w.id;
+      tab.innerHTML = `
+        <span>${w.label}</span>
+      `;
+      tab.addEventListener("click", () => {
+        setActiveWidget(w.id);
+      });
+      widgetTabsEl.appendChild(tab);
+    });
+  }
+
+  function buildPreviewCards() {
+    previewGridEl.innerHTML = "";
+    widgets.forEach(w => {
+      const card = document.createElement("div");
+      card.className = "widget-card";
+      card.dataset.id = w.id;
+
+      card.innerHTML = `
+        <div class="widget-card-header">
+          <div>
+            <div class="widget-name">${w.label}</div>
+            <div class="widget-meta">/${w.endpoint}</div>
+          </div>
+          <div class="widget-type-chip" data-type-chip></div>
+        </div>
+        <div class="em-widget-container">
+          <div class="em-gauge" data-type="${w.type}">
+            <div class="em-gauge-header">
+              <span class="label">${w.label}</span>
+              <span class="unit" data-unit></span>
+            </div>
+
+            <div class="em-gauge-bar">
+              <div class="em-gauge-bar-fill" style="width: 65%;"></div>
+            </div>
+
+            <div class="em-gauge-dial-wrapper">
+              <div class="em-gauge-dial">
+                <div class="em-gauge-dial-needle-line"></div>
+              </div>
+            </div>
+
+            <div class="em-gauge-footer">
+              <div class="em-gauge-value" data-value>75%</div>
+              <span class="sub" data-sub>Preview</span>
+            </div>
+          </div>
+        </div>
+      `;
+
+      previewGridEl.appendChild(card);
+    });
+  }
+
+  function populateControlsFromState() {
+    const state = widgetState[activeWidgetId];
+    if (!state) return;
+
+    $("labelInput").value = state.label || "";
+    $("endpointInput").value = state.endpoint || "";
+
+    $("accentColor").value = state.accentColor;
+    $("accentColorHex").value = state.accentColor;
+
+    $("bgColor").value = state.bgColor;
+    $("bgColorHex").value = state.bgColor;
+
+    $("textColor").value = state.textColor;
+    $("textColorHex").value = state.textColor;
+
+    $("fontFamily").value = state.fontFamily || "";
+    $("hideWhenNoData").checked = !!state.hideWhenNoData;
+
+    document.querySelectorAll(".radio-pill").forEach(el => {
+      el.classList.toggle("active", el.dataset.typeOption === state.type);
+    });
+
+    $("bgImageFile").value = "";
+  }
+
+  function setActiveWidget(id) {
+    activeWidgetId = id;
+    document.querySelectorAll(".widget-tab").forEach(tab => {
+      tab.classList.toggle("active", tab.dataset.id === id);
+    });
+    populateControlsFromState();
+    updatePreviewForWidget(id);
+    updateExportOutputs();
+  }
+
+  function adjustHexBrightness(hex, amt) {
+    // expects "#rrggbb"
+    if (!/^#([0-9a-fA-F]{6})$/.test(hex)) return hex;
+    let r = parseInt(hex.slice(1, 3), 16);
+    let g = parseInt(hex.slice(3, 5), 16);
+    let b = parseInt(hex.slice(5, 7), 16);
+    const clamp = v => Math.max(0, Math.min(255, v));
+    r = clamp(r + amt);
+    g = clamp(g + amt);
+    b = clamp(b + amt);
+    const toHex = v => v.toString(16).padStart(2, "0");
+    return "#" + toHex(r) + toHex(g) + toHex(b);
+  }
+
+  function updatePreviewForWidget(id) {
+    const state = widgetState[id];
+    const card = previewGridEl.querySelector(`.widget-card[data-id="${id}"]`);
+    if (!state || !card) return;
+
+    const nameEl = card.querySelector(".widget-name");
+    const metaEl = card.querySelector(".widget-meta");
+    const typeChip = card.querySelector("[data-type-chip]");
+    const gauge = card.querySelector(".em-gauge");
+
+    if (nameEl) nameEl.textContent = state.label || id;
+    if (metaEl) metaEl.textContent = "/" + (state.endpoint || id);
+    if (typeChip) typeChip.textContent = state.type === "dial" ? "Dial" : "Bar";
+
+    if (gauge) {
+      gauge.dataset.type = state.type;
+
+      const labelEl = gauge.querySelector(".em-gauge-header .label");
+      const unitEl = gauge.querySelector("[data-unit]");
+      const valueEl = gauge.querySelector("[data-value]");
+      const subEl = gauge.querySelector("[data-sub]");
+
+      if (labelEl) labelEl.textContent = state.label || id;
+
+      let unit = "";
+      let value = "";
+
+      switch (id) {
+        case "rpm":
+          unit = "RPM";
+          value = "7200";
+          break;
+        case "speed":
+          unit = "MPH";
+          value = "65";
+          break;
+        case "boost":
+          unit = "PSI";
+          value = "14.5";
+          break;
+        default:
+          unit = "%";
+          value = "78%";
+          break;
+      }
+      if (unitEl) unitEl.textContent = unit;
+      if (valueEl) valueEl.textContent = value;
+      if (subEl) subEl.textContent = "Preview";
+
+      const needleLine = gauge.querySelector(".em-gauge-dial-needle-line");
+      if (needleLine) {
+        const mockValue = id === "rpm" ? 0.8 : 0.65;
+        const angle = -90 + (mockValue * 180);
+        needleLine.style.transform = `translateX(-50%) rotate(${angle.toFixed(1)}deg)`;
+      }
+
+      gauge.style.setProperty("--em-accent", state.accentColor);
+      gauge.style.setProperty("--em-bg", state.bgColor);
+      gauge.style.setProperty("--em-text", state.textColor);
+      gauge.style.setProperty("--em-track", state.accentColor + "33");
+      const font = state.fontFamily && state.fontFamily.trim()
+        ? state.fontFamily.trim()
+        : 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+      gauge.style.setProperty("--em-font", font);
+
+      const accentDark = adjustHexBrightness(state.accentColor, -170);
+      gauge.style.setProperty("--em-accent-dial-bg", accentDark);
+
+      const baseBg = state.bgColor;
+      if (state.bgImageData) {
+        gauge.style.background = `radial-gradient(circle at 0 0, rgba(88,255,236,0.12), transparent 50%), url("${state.bgImageData}"), ${baseBg}`;
+      } else {
+        gauge.style.background = `radial-gradient(circle at 0 0, rgba(88,255,236,0.12), transparent 50%), ${baseBg}`;
+      }
+    }
+  }
+
+  function recommendedSize(state) {
+    if (state.type === "dial") {
+      return { w: 150, h: 130 };
+    }
+    return { w: 150, h: 75 };
+  }
+
+  function buildObsUrl(widget) {
+    const baseRaw = $("baseUrl").value.trim() || "http://127.0.0.1:9990";
+    const base = baseRaw.replace(/\/+$/, "");
+    const endpoint = (widget.endpoint || widget.id || "widget").replace(/^\/+/, "");
+    return base + "/" + endpoint;
+  }
+
+  function buildCssSnippet(state) {
+    const containerSelRaw = $("containerSelector").value.trim() || ".em-widget-container";
+    const containerSel = containerSelRaw || ".em-widget-container";
+
+    const accent = state.accentColor;
+    const bg = state.bgColor;
+    const text = state.textColor;
+    const font = state.fontFamily && state.fontFamily.trim()
+      ? state.fontFamily.trim()
+      : 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+
+    const bgImageData = state.bgImageData || "";
+    const bgImage = bgImageData ? `url("${bgImageData}")` : "none";
+
+    const hideFlag = !!state.hideWhenNoData;
+
+    const size = recommendedSize(state);
+    const url = buildObsUrl(state);
+
+    const accentDark = adjustHexBrightness(accent, -170);
+
+    let css = `/* ErinsMod Webdash ${state.label} widget
+   Recommended size: ${size.w}x${size.h}
+   Example URL: ${url}
+*/
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Root container wrapping the gauge */
+${containerSel} {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hide scrollbars if any */
+${containerSel}::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Gauge root */
+${containerSel} .em-gauge {
+  width: 100%;
+  height: 100%;
+  max-width: ${size.w}px;
+  max-height: ${size.h}px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(80, 120, 210, 0.95);
+  background:
+    radial-gradient(circle at 0 0, rgba(88,255,236,0.12), transparent 50%),
+    ${bgImage !== "none" ? `${bgImage},` : ""}
+    ${bg};
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.9),
+    0 10px 24px rgba(0,0,0,0.85);
+  color: var(--em-text);
+  font-family: var(--em-font);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header/footer text */
+${containerSel} .em-gauge-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.9;
+}
+
+${containerSel} .em-gauge-header .label {
+  font-weight: 600;
+}
+
+${containerSel} .em-gauge-header .unit {
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+${containerSel} .em-gauge-footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+${containerSel} .em-gauge-value {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+${containerSel} .em-gauge-footer [data-sub] {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+/* Dim the gauge when Webdash marks no-data */
+body.no-data ${containerSel} .em-gauge {
+  opacity: 0.3;
+  filter: grayscale(0.8);
+}
+
+/* Bar mode (base) */
+${containerSel} .em-gauge-bar {
+  margin: 4px 0 2px 0;
+  height: 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(4,8,18,0.95), ${accent}33);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.75);
+  overflow: hidden;
+  position: relative;
+}
+
+${containerSel} .em-gauge-bar-fill {
+  height: 100%;
+  width: 65%;
+  background: linear-gradient(90deg, rgba(72,255,186,0.1), ${accent});
+  box-shadow:
+    0 0 16px rgba(0,0,0,0.9),
+    0 0 18px rgba(88, 255, 236, 0.6);
+  border-radius: inherit;
+}
+
+/* Dial mode (base) */
+${containerSel} .em-gauge-dial-wrapper {
+  display: none;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+${containerSel} .em-gauge-dial {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  position: relative;
+  background:
+    radial-gradient(circle at 50% 15%, ${accentDark}, transparent 55%),
+    radial-gradient(circle at 50% 80%, rgba(10, 14, 26, 0.98), rgba(2, 4, 10, 1));
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.05),
+    0 0 18px rgba(0,0,0,0.9);
+}
+
+/* Webdash can rotate this based on live value; default is mid-sweep */
+${containerSel} .em-gauge-dial-needle-line {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 2px;
+  height: 34%;
+  background: ${accent};
+  box-shadow: 0 0 12px rgba(80,255,234,0.9);
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+/* Show/hide bar vs dial using Webdash data-type (baseline) */
+${containerSel} .em-gauge[data-type="bar"] .em-gauge-bar {
+  display: block;
+}
+${containerSel} .em-gauge[data-type="bar"] .em-gauge-dial-wrapper {
+  display: none;
+}
+
+${containerSel} .em-gauge[data-type="dial"] .em-gauge-bar {
+  display: none;
+}
+${containerSel} .em-gauge[data-type="dial"] .em-gauge-dial-wrapper {
+  display: flex;
+}
+`;
+
+    if (hideFlag) {
+      css += `
+
+/* Hide widget when no data is active */
+body.no-data ${containerSel} {
+  display: none;
+}
+`;
+    }
+
+    if (state.type === "dial") {
+      css += `
+
+/* Force dial mode for this widget */
+${containerSel} .em-gauge-bar {
+  display: none !important;
+}
+${containerSel} .em-gauge-dial-wrapper {
+  display: flex !important;
+}
+`;
+    } else {
+      css += `
+
+/* Force bar mode for this widget */
+${containerSel} .em-gauge-bar {
+  display: block !important;
+}
+${containerSel} .em-gauge-dial-wrapper {
+  display: none !important;
+}
+`;
+    }
+
+    css += `
+
+/* Apply root CSS variables */
+${containerSel} .em-gauge {
+  --em-accent: ${accent};
+  --em-bg: ${bg};
+  --em-text: ${text};
+  --em-font: ${font};
+}
+`;
+
+    return css;
+  }
+
+  function updateExportOutputs() {
+    const state = widgetState[activeWidgetId];
+    if (!state) return;
+
+    const size = recommendedSize(state);
+    const url = buildObsUrl(state);
+    const css = buildCssSnippet(state);
+
+    $("exportWidgetName").textContent = state.label || state.id;
+    $("exportWidgetPath").textContent = "/" + (state.endpoint || state.id);
+    $("exportWidgetType").textContent = state.type === "dial" ? "Dial" : "Bar";
+    $("exportSize").textContent = `${size.w} × ${size.h}`;
+    $("exportUrl").value = url;
+    $("exportCss").value = css;
+  }
+
+  function normaliseHex(value, fallback) {
+    if (!value) return fallback;
+    value = value.trim();
+    if (!value) return fallback;
+    if (value[0] !== "#") value = "#" + value;
+    if (!/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/.test(value)) {
+      return fallback;
+    }
+    if (value.length === 4) {
+      const r = value[1], g = value[2], b = value[3];
+      value = "#" + r + r + g + g + b + b;
+    }
+    return value.toLowerCase();
+  }
+
+  function bindControlEvents() {
+    $("labelInput").addEventListener("input", () => {
+      widgetState[activeWidgetId].label = $("labelInput").value;
+      updatePreviewForWidget(activeWidgetId);
+      updateExportOutputs();
+    });
+
+    $("endpointInput").addEventListener("input", () => {
+      const v = $("endpointInput").value.trim().replace(/^\/+/, "");
+      widgetState[activeWidgetId].endpoint = v || widgetState[activeWidgetId].id;
+      updatePreviewForWidget(activeWidgetId);
+      updateExportOutputs();
+    });
+
+    document.querySelectorAll(".radio-pill").forEach(el => {
+      el.addEventListener("click", () => {
+        const type = el.dataset.typeOption;
+        widgetState[activeWidgetId].type = type;
+        document.querySelectorAll(".radio-pill").forEach(pill => {
+          pill.classList.toggle("active", pill.dataset.typeOption === type);
+        });
+        updatePreviewForWidget(activeWidgetId);
+        updateExportOutputs();
+      });
+    });
+
+    function bindColorPair(colorId, hexId, stateKey) {
+      const colorInput = $(colorId);
+      const hexInput = $(hexId);
+
+      colorInput.addEventListener("input", () => {
+        const v = colorInput.value;
+        widgetState[activeWidgetId][stateKey] = v;
+        hexInput.value = v;
+        updatePreviewForWidget(activeWidgetId);
+        updateExportOutputs();
+      });
+
+      hexInput.addEventListener("change", () => {
+        const val = normaliseHex(hexInput.value, widgetState[activeWidgetId][stateKey]);
+        widgetState[activeWidgetId][stateKey] = val;
+        colorInput.value = val;
+        updatePreviewForWidget(activeWidgetId);
+        updateExportOutputs();
+      });
+    }
+
+    bindColorPair("accentColor", "accentColorHex", "accentColor");
+    bindColorPair("bgColor", "bgColorHex", "bgColor");
+    bindColorPair("textColor", "textColorHex", "textColor");
+
+    $("fontFamily").addEventListener("input", () => {
+      const st = widgetState[activeWidgetId];
+      st.fontFamily = $("fontFamily").value;
+      updatePreviewForWidget(activeWidgetId);
+      updateExportOutputs();
+    });
+
+    $("bgImageFile").addEventListener("change", (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) {
+        widgetState[activeWidgetId].bgImageData = "";
+        updatePreviewForWidget(activeWidgetId);
+        updateExportOutputs();
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = () => {
+        widgetState[activeWidgetId].bgImageData = reader.result;
+        updatePreviewForWidget(activeWidgetId);
+        updateExportOutputs();
+      };
+      reader.readAsDataURL(file);
+    });
+
+    $("hideWhenNoData").addEventListener("change", () => {
+      widgetState[activeWidgetId].hideWhenNoData = $("hideWhenNoData").checked;
+      updateExportOutputs();
+    });
+
+    $("baseUrl").addEventListener("input", () => {
+      updateExportOutputs();
+    });
+
+    $("containerSelector").addEventListener("input", () => {
+      updateExportOutputs();
+    });
+
+    $("copyUrlBtn").addEventListener("click", () => {
+      const text = $("exportUrl").value;
+      if (!text) return;
+      navigator.clipboard?.writeText(text).catch(() => {
+        $("exportUrl").select();
+        document.execCommand("copy");
+      });
+    });
+
+    $("copyCssBtn").addEventListener("click", () => {
+      const text = $("exportCss").value;
+      if (!text) return;
+
+      const btn = $("copyCssBtn");
+      const originalLabel = btn.textContent;
+
+      const doFeedback = () => {
+        btn.textContent = "Copied!";
+        btn.disabled = true;
+        setTimeout(() => {
+          btn.textContent = originalLabel;
+          btn.disabled = false;
+        }, 900);
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(doFeedback).catch(() => {
+          $("exportCss").select();
+          document.execCommand("copy");
+          doFeedback();
+        });
+      } else {
+        $("exportCss").select();
+        document.execCommand("copy");
+        doFeedback();
+      }
+    });
+  }
+
+  function init() {
+    buildWidgetTabs();
+    buildPreviewCards();
+    bindControlEvents();
+    widgets.forEach(w => updatePreviewForWidget(w.id));
+    setActiveWidget(activeWidgetId);
+  }
+
+  document.addEventListener("DOMContentLoaded", init);
+</script>
+</body>
+</html>
